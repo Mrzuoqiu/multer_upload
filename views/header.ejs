@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav>
+  <section>
+    <h2><a href="/">左秋c</a></h2>
+  </section>
+  <div class="navbar">
+    <ul>
+      <li><a href="/">首页</a></li>
+
+      <% if(user) { %>
+      <li class="userImg"><a href="/user"><img src=<%= userpic %> alt=""></a></li>
+      <li><a href="/post">发布</a></li>
+      <li><a href="/logout">退出</a></li>
+      <% }else { %>
+        <li><a href="/login">登录</a></li>
+        <li><a href="/register">注册</a></li>
+      <% } %>
+    </ul>
+  </div>
+</nav>
+<main>
+  <% if (success) { %>
+    <p><%= success %></p>
+  <% } %>
+  <% if(error) { %>
+    <p><%= error %></p>
+  <% } %>

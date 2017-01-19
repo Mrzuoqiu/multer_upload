@@ -1,0 +1,50 @@
+<% include header %>
+
+<h2><%= title %></h2>
+<form class="userpicUpload" enctype="multipart/form-data" action="/user" method="POST">
+  <ul>
+    <li class="userPhoto"><img src=<%= userpic %> alt=""></li>
+    <input class="uploadFile" name="userpic" type="file">
+    <li><input class="chooseBtn" type="button" value="选择头像"><input class="upload" type="submit" value="上传"></li>
+  </ul>
+</form>
+
+
+<% include footer%>
+<script>
+  var userPic = document.querySelector('.userPhoto img')
+  var inputFile = document.querySelector('.uploadFile');
+  var chooseBtn = document.querySelector('.chooseBtn');
+  var upload = document.querySelector('.upload');
+
+  chooseBtn.onclick = function () {
+      inputFile.click();
+  }
+  userPic.onclick = function () {
+      inputFile.click();
+  }
+  inputFile.onchange = function () {
+//      console.dir(this);
+//      console.log(this.files[0]);
+      var file = this.files[0];
+      if(file){
+          if(file.type.startsWith('image')) {
+              //创建一个指向该文件的路径
+              var src = URL.createObjectURL(file);
+//              console.log(src);
+              userPic.src = src;
+          }else {
+              alert('请选择图片文件');
+          }
+
+      }else {
+          //没有的选择图片的话禁止点击上传 使用bootstarp的按钮禁止 将class类名添加上
+          //然而忘了源生JS的添加  属性名:属性值  怎么写-.-
+          //如果禁止的话 就将对应的路由里面的if(){} else{res.end()}删掉
+//          upload.attribute();
+
+      }
+
+
+  }
+</script>

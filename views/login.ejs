@@ -1,0 +1,20 @@
+<% include header %>
+
+<h2><%= title %></h2>
+<form action="/login" method="POST">
+  <ul>
+    <li>
+      <label for="">账号：</label>
+      <input type="text" name="username" placeholder="请输入用户名">
+    </li>
+    <li>
+      <label for="">密码：</label>
+      <input type="password" name="password" placeholder="请输入密码">
+    </li>
+    <li>
+      <input type="submit" value="登录">
+    </li>
+  </ul>
+</form>
+
+<% include footer %>

@@ -1,0 +1,26 @@
+<% include header %>
+
+
+<h2><%= title %></h2>
+
+    <ul class="indexSec">
+        <% for(var i = 0,len = content.length; i< len; i ++ ) { %>
+        <% var option = content[i] %>
+        <li>
+            <div class="title">
+                <h3><%= option.title %></h3>
+                <section class="user_info">
+                    <p>
+                        <img src=<%= 'images/' + option.picUrl %> alt="">
+                        <span class="name"><%= option.name %></span>
+                    </p>
+                    <em class="time"><%= option.time.minute %></em>
+                </section>
+            </div>
+            <div class="content">
+                <p><%= option.content %></p>
+            </div>
+        <% } %>
+        </li>
+    </ul>
+<% include footer %>

@@ -1,0 +1,29 @@
+<% include header %>
+
+<h2><%= title %></h2>
+<form action="/register" method="POST">
+  <ul>
+    <li>
+      <label for="">账号：</label>
+      <input type="text" name="username" placeholder="请输入账号">
+
+    </li>
+    <li>
+      <label for="">密码：</label>
+      <input type="password" name="password" placeholder="请输入密码">
+    </li>
+    <li>
+      <label for="">确认：</label>
+      <input type="password" name="password_rep" placeholder="请再次输入密码">
+    </li>
+    <li>
+      <label for="">邮箱：</label>
+      <input type="email" name="email" placeholder="请输入邮箱">
+    </li>
+    <li>
+      <input type="submit" value="注册">
+    </li>
+  </ul>
+</form>
+
+<% include footer %>

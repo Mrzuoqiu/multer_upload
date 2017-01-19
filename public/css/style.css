@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    background-color: #eeeeee;
+    width: 100%;
+    height: 100%;
+}
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333333;
+    height: 50px;
+    width: 100%;
+}
+ul,li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+h1,h2,h3,h4,h5,h6,p {
+    margin: 0;
+    padding: 0;
+
+}
+.navbar {
+    width: 600px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+}
+nav section {
+    height: 50px;
+    width: 200px;
+    position: absolute;
+    left: 50px;
+}
+nav section h2 {
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    color: #eeeeee;
+}
+nav section a {
+    text-decoration: none;
+    color: #eeeeee;
+}
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.navbar li {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    margin-right:10px;
+}
+.navbar .userImg {
+    margin-right: 5px;
+    text-align: center;
+}
+ .userImg img{
+    width: 35px;
+    height: 35px;
+     margin-top: 8px;
+    border-radius: 50%;
+}
+.navbar a {
+    text-decoration: none;
+    color: #FFFFFF;
+    display: block;
+}
+.navbar a:hover {
+    color: orange;
+}
+
+main {
+    padding:50px 20px 10px 20px;
+    width: 800px;
+    height: 1000px;
+    margin:0 auto;
+    background-color: #fff;
+}
+main h2 {
+    text-align: center;
+    line-height: 50px;
+    color: #333;
+    border-bottom:1px solid darkgray;
+}
+main .indexSec li {
+    border-bottom: 1px solid #eeeeee;
+}
+main .title {
+    background-color: #F8F0E4;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 10px;
+    height: 60px;
+}
+main .content p{
+    text-indent: 2em;
+    margin: 0;
+    font-size:1rem;
+    padding: 20px 0;
+}
+main .title img {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin:0 auto;
+    border-radius: 50%;
+}
+main .title .name {
+    font-size:14px;
+}
+main .title .time {
+    font-size: 12px;
+}
+main .user_info {
+    display: flex;
+    align-items: flex-end;
+}
+main .user_info p {
+    margin-right:10px;
+    text-align: center;
+}
+
+main form {
+    padding:5px;
+
+
+}
+main form li {
+    margin-top:10px;
+    text-align: center;
+}
+main .userpicUpload .uploadFile {
+    display: none;
+}
+main .userPhoto img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+main .userpicUpload input {
+    border: none;
+    background-color: orange;
+    display: inline-block;
+    width: 70px;
+    line-height: 30px;
+    margin-right:10px;
+    padding:0 5px;
+    color: #FFFFFF;
+}

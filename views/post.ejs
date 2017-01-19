@@ -1,0 +1,20 @@
+<% include header %>
+
+<h2><%= title %></h2>
+<form action="/post" method="POST">
+  <ul>
+    <li>
+      <label>标题:</label>
+      <input type="text" name="title" placeholder="请输入标题">
+    </li>
+    <li>
+      <label>内容:</label>
+      <textarea name="content" id="" cols="30" rows="10"></textarea>
+    </li>
+    <li>
+      <input type="submit" value="发布">
+    </li>
+  </ul>
+</form>
+
+<% include footer %>
